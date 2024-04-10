@@ -1,6 +1,8 @@
 from scanner import Scanner
 def main ():
-    s = Scanner('true or false')
+    exam =input('Introduce a boolean valor: ')
+    exam=exam.lower()
+    s = Scanner(exam)
     tokens = s.scanAll()
     print(tokens)
 

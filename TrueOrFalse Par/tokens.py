@@ -10,7 +10,13 @@ class TokenType(Enum):
     LPAREN = 6
     RPAREN = 7  
 
+    def __str__(self) -> str:
+        return self.name
+
 @dataclass
 class Token:
     token_type: TokenType
     lexeme: str
+
+    def __repr__(self) -> str:
+        return f'{self.token_type}("{self.lexeme}")'
